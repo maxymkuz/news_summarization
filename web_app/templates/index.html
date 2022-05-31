@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div id="qwerty"><div id="please">
+        <form action="/" method="POST">
+            <label for="article"></label>
+            <textarea id="article" name="article">{{ generated_text }}</textarea><br>
+            <input type="submit" value="Generate"/>
+        </form>
+        {% if generated_text %}
+            <p id="first">Summary:</p>
+            <div id="second"><p>{{ generated_text }}</p></div>
+        {% endif %}
+    </div></div>
+</body>
+</html>
